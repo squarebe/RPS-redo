@@ -8,6 +8,7 @@ class RPS < Sinatra::Base
   end
 
   set :views, proc { File.join(root, '..', 'views') }
+  set :public, proc { File.join(root, '..', 'public') }
 
   get '/' do
     erb :index
